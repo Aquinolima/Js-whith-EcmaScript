@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Aula 12 - base ex 09</title>
+</head>
+<style></style>
+<body>
+    <h1>Sistema de País</h1>
+    <h3>O país que você está é: <input type="text" name="pais" id="pais"></h3>
+    <input type="button" value="verificar" onclick="verificar()">
+    <div id="res"></div> 
+
+<script>
+    function verificar () {
+        var onde = document.querySelector('#pais').value; 
+        var res = document.querySelector('#res');
+        res.innerHTML = `<p>Você está em <strong>${onde}</strong>!</p>`
+        if ( onde == 'Brasil') {
+            res.innerHTML += `<p>Você é Brasileiro!</p>`;
+        } else {
+            res.innerHTML += `<p>Você é Estrangeiro!</p>`;
+        }
+     }
+
+</script>    
+</body>
+</html>
